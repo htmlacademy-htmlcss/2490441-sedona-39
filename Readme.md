@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Savva Melnikov](https://up.htmlacademy.ru/htmlcss/39/user/2490441).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Ермолаев](https://htmlacademy.ru/profile/id128353).
+* Сайт: [ссылка](https://apregot.github.io/2490441-sedona-39/).
 
 ---
 
