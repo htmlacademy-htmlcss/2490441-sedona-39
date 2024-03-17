@@ -1,0 +1,17 @@
+.visually-hidden {
+  display: none;
+}
+
+.actions-link-search-button {
+  display: block;
+  background-image: url('../images/icons/search.svg');
+  width: 19px;
+  height: 19px;
+}
+
+.inner-header {
+  background-image: url('../images/catalog/filter-backfround.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #81B3D3;
+}
