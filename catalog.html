@@ -27,25 +27,25 @@
           </ul>
         </div>
 
-        <ul class="header-actions-list">
-          <li class="actions-item">
-            <a href="#" class="actions-link">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="#" class="actions-link icon search-icon">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="actions-item">
-            <a href="#" class="actions-link">
+          <li class="navigation-item">
+            <a href="#" class="actions-link icon heart-icon">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
-          <li class="actions-item">
+          <li class="navigation-item">
             <a href="#" class="button button-brown">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main class="main">
       <h1 class="visually-hidden">Поиск гостинниц Седоны</h1>
       <header class="inner-header">
         <h2 class="inner-header-title">Гостиницы Седоны</h2>
@@ -136,19 +136,19 @@
             <option value="expensive-fist">Сначала дорогие</option>
             <option value="popular-fist">Сначала популярные</option>
           </select>
-          <ul class="catalog-sort-buttons">
-            <li>
-              <a class="icon-table" href="#">
+          <ul class="catalog-sort-button-list">
+            <li class="catalog-sort-button catalog-sort-button-active">
+              <a class="icon icon-tiles" href="#">
                 <span class="visually-hidden">Таблица</span>
               </a>
             </li>
-            <li>
-              <a class="icon-feed" href="#">
+            <li class="catalog-sort-button">
+              <a class="icon icon-list" href="#">
                 <span class="visually-hidden">Лента</span>
               </a>
             </li>
-            <li>
-              <a class="icon-list" href="#">
+            <li class="catalog-sort-button">
+              <a class="icon icon-scroll" href="#">
                 <span class="visually-hidden">Cписок</span>
               </a>
             </li>
@@ -264,22 +264,22 @@
       <section class="pagination">
         <ul class="pagination-list">
           <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
+            <button class="button button-blue pagination-link pagination-current">1</button>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
+            <button class="button button-blue pagination-link" href="#">2</button>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
+            <button class="button button-blue pagination-link" href="#">3</button>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">4</a>
+            <button class="button button-blue pagination-link" href="#">4</button>
           </li>
           <li class="pagination-item">
-            <span class="pagination-delimetr">...</span>
+            <span class="pagination-delimeter">...</span>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">10</a>
+            <button class="button button-blue pagination-link" href="#">10</button>
           </li>
         </ul>
       </section>
@@ -288,8 +288,8 @@
     <footer class="footer">
       <section class="subscribe subscribe-no-background">
         <h3 class="visually-hidden">Рассылка</h3>
-        <h3 class="suscribe-title">Подпишитесь на рассылку</h3>
-        <p class="suscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <h3 class="subscribe-title">Подпишитесь на рассылку</h3>
+        <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="text" name="e-mail" placeholder="Ваш e-mail">
           <button class="button button-blue" type="submit">Подписаться</button>
@@ -300,17 +300,17 @@
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="socials-link socials-link-vk" href="https://vk.com/htmlacademy">
+              <a class="socials-link icon icon-vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">ВКонтакте</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="socials-link socials-link-telegram" href="https://t.me/htmlacademy">
+              <a class="socials-link icon icon-telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="socials-link socials-link-youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="socials-link icon icon-youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Ютуб</span>
               </a>
             </li>
