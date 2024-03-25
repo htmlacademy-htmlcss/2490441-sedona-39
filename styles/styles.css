@@ -29,14 +29,21 @@ body {
   min-height: 100%;
 }
 
-ul {
+ul, ol {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main {
@@ -55,6 +62,7 @@ ul {
   width: 142px;
   display: flex;
   margin: 0 41px 0 70px;
+  flex-wrap: wrap;
 }
 
 .socials-link {
@@ -90,7 +98,6 @@ h3 {
 
 .header-navigation {
   display: flex;
-  justify-content: space-between;
   padding: 0 70px;
   height: 64px;
   background-color: #ffffff;
@@ -101,7 +108,10 @@ h3 {
 }
 
 .navigation-list {
+  width: 507px;
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -134,13 +144,16 @@ h3 {
   margin: 0 auto;
 }
 
+.advantages,
+.services {
+    text-align: center;
+}
+
 .advantages-section-header {
-  text-align: center;
   padding: 69px 0;
 }
 
 .services-section-header {
-  text-align: center;
   padding: 64px 0;
 }
 
@@ -156,15 +169,53 @@ h3 {
   margin: 25px 0 0;
 }
 
+.services-name,
+.advantages-title {
+  max-width: 170px;
+}
+
+.advantages-title {
+  margin: 0;
+}
+
+.services-name {
+  margin: 30px 0;
+}
+
+.services-description,
 .advantages-description {
   font-size: 18px;
   line-height: 21px;
   color: #333;
+  max-width: 230px;
+  margin: 0;
+}
+
+.services-list,
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-item,
+.services-item {
+    height: 385px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 85px;
+    text-align: center
+}
+
+.advantages-item.image-item {
+    padding: 0;
 }
 
 .advantages-block-item {
   background-color: #82B3D3;
   color: #ffffff;
+  display: flex;
 }
 
 .advantages-block-item .advantages-description {
@@ -173,10 +224,23 @@ h3 {
 
 .advantages-image {
   display: block;
+  margin: 0;
+}
+
+.advantages-delimeter {
+  width: 60px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 30px auto;
 }
 
 .advantages-list>.advantages-item {
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-list>.advantages-item .advantages-delimeter,
+.advantages-list>.advantages-item-dark .advantages-delimeter {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .advantages-list>.advantages-item-dark {
@@ -189,12 +253,6 @@ h3 {
 
 .services-item-light {
   background-color: rgba(131, 179, 211, 0.12);
-}
-
-.services-description {
-  color: #333;
-  font-size: 18px;
-  line-height: 21px;
 }
 
 .appointment {
@@ -289,7 +347,21 @@ h3 {
 }
 
 .services-icon-home {
+  width: 84px;
+  height: 84px;
   background-image: url("../images/icons/services/home.svg");
+}
+
+.services-icon-burger {
+  width: 84px;
+  height: 84px;
+  background-image: url("../images/icons/services/burger.svg");
+}
+
+.services-icon-gift {
+  width: 84px;
+  height: 84px;
+  background-image: url("../images/icons/services/gift.svg");
 }
 
 .icon-vk {
@@ -299,8 +371,8 @@ h3 {
 }
 
 .icon-telegram {
-  width: 24px;
-  height: 14px;
+  width: 18px;
+  height: 15px;
   background-image: url('../images/icons/social/telegram.svg');
 }
 
@@ -328,6 +400,20 @@ h3 {
   background-image: url('../images/icons/view-mode/scroll.svg');
 }
 
+.inner-header-icon-home {
+  width: 13px;
+  height: 15px;
+  color: white;
+  background-image: url('../images/icons/home.svg');
+}
+
+.inner-header-icon-breadcrumbs {
+  width: 13px;
+  height: 15px;
+  color: white;
+  background-image: url('../images/icons/breadcrumbs.svg');
+}
+
 .developer {
   margin: 0 70px 0 41px;
 }
@@ -342,7 +428,12 @@ h3 {
   text-decoration: none;
   color: #ffffff;
   border: none;
+  border-radius: 4px;
   padding: 8px 50px;
+}
+
+.button-small {
+  font-size: 16px;
 }
 
 .card-button {
@@ -388,6 +479,15 @@ h3 {
   align-items: center;
   height: 49px;
   margin: 50px 70px 0 70px;
+}
+
+.search-result-list {
+  border-bottom: #E6E6E6 solid 1px;
+  margin: 40px 70px 0;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
 }
 
 .catalog-sort {
