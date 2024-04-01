@@ -91,6 +91,13 @@ body {
   background-color: rgba(131, 179, 211, 0.5);
 }
 
+.main-header::after {
+  margin: 0 auto;
+  width: 1200px;
+  height: 57px;
+  content: url('../images/index/divider.svg');
+}
+
 .main-page-link {
   z-index: 1;
   margin-right: 30px;
@@ -188,12 +195,7 @@ body {
   padding: 51px 0 25px;
 }
 
-.header-divider {
-  margin: 0 auto;
-  width: 1200px;
-  height: 57px;
-  background-image: url('../images/index/divider.svg');
-}
+
 
 .advantages,
 .services {
@@ -226,11 +228,31 @@ body {
 }
 
 .advantages-title {
-  margin: 0;
+  margin: 0 0 60px 0;
+  position: relative;
+}
+
+.advantages-title::after {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60px;
+  height: 2px;
+  margin: 30px auto;
+  content: '';
+  position: absolute;
+  left: 58px;
+  top: 57px;
+}
+
+.advantages-delimeter {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60px;
+  height: 2px;
+  margin: 30px auto;
 }
 
 .services-name {
   margin: 0;
+  position: relative;
 }
 
 .services-description,
@@ -272,7 +294,7 @@ body {
   background-color: #82B3D3;
   color: #ffffff;
   display: flex;
-align-items: center;
+  align-items: center;
 }
 
 .advantages-block-item .advantages-description {
@@ -284,15 +306,9 @@ align-items: center;
   margin: 0;
 }
 
-.advantages-delimeter {
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 60px;
-  height: 2px;
-  margin: 30px auto;
-}
-
-.advantages-block-item .advantages-delimeter {
+.advantages-block-item .advantages-title::after {
   background-color: #ffffff;
+  opacity: 0.3;
 }
 
 .advantages-list>.advantages-item {
@@ -456,22 +472,30 @@ align-items: center;
   height: 20px;
 }
 
-.services-icon-home {
+.services-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.services-name-home::before {
+  content: url('../images/icons/services/home.svg');
   width: 77px;
-  height: 74px;
-  background-image: url("../images/icons/services/home.svg");
+  height: 72px;
 }
 
-.services-icon-burger {
+.services-name-burger::before {
   width: 75px;
-  height: 72px;
-  background-image: url("../images/icons/services/burger.svg");
+  height: 70px;
+  content: url("../images/icons/services/burger.svg");
 }
 
-.services-icon-gift {
-  width: 75px;
-  height: 72px;
-  background-image: url("../images/icons/services/gift.svg");
+.services-name-gift::before {
+  width: 65px;
+  height: 76px;
+  content: url("../images/icons/services/gift.svg");
 }
 
 .footer-social-item {
@@ -535,14 +559,7 @@ align-items: center;
 
 .inner-header-icon-home {
   width: 13px;
-  height: 15px;
   background-image: url('../images/icons/home.svg');
-}
-
-.inner-header-icon-breadcrumbs {
-  width: 13px;
-  height: 15px;
-  background-image: url('../images/icons/breadcrumbs.svg');
 }
 
 .input {
@@ -702,9 +719,18 @@ align-items: center;
   margin-bottom: 40px;
 }
 
-.inner-header-arrow-item,
+.inner-header-navigation-list-item:not(:last-of-type) {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.inner-header-navigation-list-item:not(:last-of-type)::after {
+  content: url('../images/icons/breadcrumbs.svg');
+}
+
 .inner-header-navigation-item {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 .inner-header-navigation-item {
@@ -1148,13 +1174,34 @@ input[type=number] {
 
 .result-list-item-rating-stars {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  background-image: url("../images/icons/star.svg");
+  background-repeat: repeat-x;
+  width: var(--star-width);
+  height: 17px;
+  margin: 10px 0 0;
 }
 
-.result-list-item-rating-stars .icon {
-  background-image: url('../images/icons/star.svg');
-  min-width: 18px;
-  min-height: 17px;
-  margin-right: 6px;
+.rating-stars-5 {
+  --star-width: 114px;
+}
+
+.rating-stars-4 {
+  --star-width: 90px;
+}
+
+.rating-stars-3 {
+  --star-width: 66px;
+}
+
+.rating-stars-2 {
+  --star-width: 42px;
+}
+
+.rating-stars-1 {
+  --star-width: 18px;
 }
 
 .result-list-item-type,
@@ -1440,8 +1487,9 @@ input[type=number] {
   z-index: 1000;
 }
 
-.popover-triangle {
+.popover-info::before {
   position: absolute;
+  content: '';
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -1454,6 +1502,7 @@ input[type=number] {
 }
 
 .popover-content {
+  z-index: 1;
   width: auto;
   font-size: 16px;
   line-height: 20px;
