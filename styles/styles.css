@@ -258,10 +258,6 @@ body {
   text-align: center
 }
 
-.advantages-item.image-item {
-  /* padding: 0; */
-}
-
 .services-item {
   display: flex;
   min-width: 400px;
@@ -684,7 +680,7 @@ align-items: center;
 
 .inner-header {
   background-image: url('../images/catalog/filter-background.jpg');
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(131, 179, 211, 0.5);
   color: #ffffff;
@@ -904,12 +900,6 @@ align-items: center;
   filter: none;
 }
 
-.filter-control:hover .control-mark,
-.filter-control:active .control-mark,
-.filter-control:focus-visible .control-mark {
-  filter: drop-shadow(0 4px 10px rgba(0,0,0, .25));
-}
-
 .catalog-filter-button-container {
   display: flex;
   flex-direction: column;
@@ -938,7 +928,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type=number] {
-  -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
 
 .select {
@@ -1032,19 +1022,15 @@ input[type=number] {
   width: 20px;
   height: 20px;
   background: #ffffff;
-  border: 2px solid #242424;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.range-toggle {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.range-toggle:hover,
+.range-toggle:active,
+.range-toggle:focus {
+  filter: drop-shadow(0 4px 10px rgba(0,0,0, .25));
 }
 
 .range-toggle:active,
